@@ -20,7 +20,7 @@ function TrendingNow() {
             <div className="row">
                 {
                     trendingList.map(product => (
-                        <Product key={product._id} product={product} />
+                        <Product key={product._id} product={product} name={'TrendingNow'}/>
                     ))
                 }
             </div>

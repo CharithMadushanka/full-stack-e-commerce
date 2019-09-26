@@ -20,7 +20,7 @@ function DiscoverNew() {
             <div className="row">
                 {
                     newList.map(product => (
-                        <Product key={product._id} product={product} />
+                        <Product key={product._id} product={product} name={'DiscoverNew'}/>
                     ))
                 }
             </div>

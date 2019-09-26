@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 export class Product extends Component {
     render() {
 
-        const parentName = this._reactInternalFiber._debugOwner.type.name;
+        const {name} = this.props;
         const { product } = this.props;
 
-        if(parentName === 'DiscoverNew' || parentName === 'TrendingNow')
+        if(name === 'DiscoverNew' || name === 'TrendingNow')
         {
             return(
                 <div className="col-md-4">
