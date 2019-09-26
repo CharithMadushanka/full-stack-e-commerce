@@ -1,0 +1,13 @@
+.txt[type="text"] {
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    padding: 10px 0 10px 10px;
+    width: 90%;
+}
+
+.txt{
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    padding: 10px 0 10px 10px;
+    width: 90%;
+}
