@@ -36,7 +36,7 @@ function CheckoutForm({props,setCompleted,newOrder,setNewOrder}) {
         const product = 
         {
         price : props.location.state.total * 100,
-        description : '5d76703b47d97d44947b5713'
+        description : newRequest._id
         }
     
         const response = await axios.post(
