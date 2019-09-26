@@ -5,6 +5,7 @@ const app = express()
 const mongoose = require('mongoose')
 const Product = require('./models/product')
 const Order = require('./models/order')
+const path = require('path');
 
 password = 'client123'
 
@@ -74,6 +75,17 @@ app.patch('/api/product/:id', async (req,res) => {
   const updatedProduct = await product.save()
   res.json(updatedProduct)
 })
+
+//Serve static assets if in production
+if(process.env.NODE_ENV === 'production')
+{
+  //Set static folder
+  app.use(express.static('client/build'));
+
+  app.get('*', (req,res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  })
+}
 
 const port = process.env.PORT || 5000;
 
